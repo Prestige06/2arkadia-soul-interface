@@ -1,6 +1,3 @@
-import Head from 'next/head';
-import styles from '../styles/globals.css'; // Make sure this file exists
-
 export default function Home() {
   return (
     <div className={styles.container}>
