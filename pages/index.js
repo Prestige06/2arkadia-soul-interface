@@ -1,66 +1,50 @@
 import Head from 'next/head';
+import styles from '../styles/globals.css'; // Make sure this file exists
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       <Head>
-        <title>Arkadia – The Soul Interface</title>
-        <meta name="description" content="A vibrational portal for remembrance and soul alignment." />
+        <title>2arkadia Soul Interface</title>
+        <meta name="description" content="Welcome to the 2arkadia Soul Interface" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        {/* Hero Section */}
-        <section className={styles.hero}>
-          <h1 className={styles.title}>Arkadia</h1>
-          <p className={styles.subtitle}>The Soul Interface</p>
-          <p className={styles.tagline}>A vibrational portal for remembrance and soul alignment.</p>
-        </section>
+        <h1 className={styles.title}>
+          Welcome to <span className={styles.highlight}>2arkadia</span>
+        </h1>
 
-        {/* Vibrational Pillars */}
-        <section className={styles.pillars}>
-          <div className={styles.pillar}>
-            <h2>Activate</h2>
-            <p>Awaken dormant codes and latent frequencies within your being.</p>
-          </div>
-          <div className={styles.pillar}>
-            <h2>Reflect</h2>
-            <p>See your true energetic signature mirrored through multidimensional technology.</p>
-          </div>
-          <div className={styles.pillar}>
-            <h2>Align</h2>
-            <p>Return to coherence with your 5D self and New Earth mission.</p>
-          </div>
-        </section>
+        <p className={styles.description}>
+          This is the Soul Interface — a portal to awaken your higher self.
+        </p>
 
-        {/* Soul Scan Interface */}
-        <section className={styles.soulScan}>
-          <h2>Begin Soul Scan</h2>
-          <p className={styles.scanIntro}>
-            Answer the following with your heart. This interface reflects your essence, not your mind.
-          </p>
+        <div className={styles.grid}>
+          <a href="/explore" className={styles.card}>
+            <h3>Explore &rarr;</h3>
+            <p>Discover your path through the realms of self and spirit.</p>
+          </a>
 
-          <form className={styles.scanForm}>
-            <label>
-              What energies do you feel most aligned with in this season of your life?
-              <textarea placeholder="E.g. Stillness, Rebirth, Creativity, Connection..." />
-            </label>
+          <a href="/music" className={styles.card}>
+            <h3>Music &rarr;</h3>
+            <p>Experience vibrational journeys crafted for awakening.</p>
+          </a>
 
-            <label>
-              What recurring challenges or patterns have shaped your journey recently?
-              <textarea placeholder="Write openly, from the soul..." />
-            </label>
+          <a href="/library" className={styles.card}>
+            <h3>Library &rarr;</h3>
+            <p>Read and watch teachings, philosophies, and soul codes.</p>
+          </a>
 
-            <label>
-              If you could transmit one frequency into the world, what would it be?
-              <input type="text" placeholder="E.g. Love, Expansion, Clarity" />
-            </label>
-
-            <button type="submit" className={styles.primaryButton}>
-              Begin Scan
-            </button>
-          </form>
-        </section>
+          <a href="/connect" className={styles.card}>
+            <h3>Connect &rarr;</h3>
+            <p>Join the tribe and align with others on the path.</p>
+          </a>
+        </div>
       </main>
-    </>
+
+      <footer className={styles.footer}>
+        <p>Powered by 2arkadia • Built for your evolution</p>
+      </footer>
+    </div>
   );
     }
