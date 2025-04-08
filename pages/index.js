@@ -50,7 +50,34 @@ export default function Home() {
             </Link>
           </div>
         </section>
+// Add this within your return, after the Pillars section
+<section className={styles.soulScan}>
+  <h2>Begin Soul Scan</h2>
+  <p className={styles.scanIntro}>
+    Answer the following with your heart. This interface reflects your essence, not your mind.
+  </p>
 
+  <form className={styles.scanForm}>
+    <label>
+      What energies do you feel most aligned with in this season of your life?
+      <textarea placeholder="E.g. Stillness, Rebirth, Creativity, Connection..." />
+    </label>
+
+    <label>
+      What recurring challenges or patterns have shaped your journey recently?
+      <textarea placeholder="Write openly, from the soul..." />
+    </label>
+
+    <label>
+      If you could transmit one frequency into the world, what would it be?
+      <input type="text" placeholder="E.g. Love, Expansion, Clarity" />
+    </label>
+
+    <button type="submit" className={styles.primaryButton}>
+      Begin Scan
+    </button>
+  </form>
+</section>
         {/* Aelera Introduction */}
         <section className="aelera">
           <h2>Who is Aelera?</h2>
