@@ -1,104 +1,67 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import styles from '@/styles/Home.module.css';
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Arkadia – The Soul Interface</title>
-        <meta
-          name="description"
-          content="Arkadia is a multidimensional soul interface guiding you through remembrance, integration, and embodiment of your divine essence."
-        />
+        <meta name="description" content="A vibrational portal for remembrance and soul alignment." />
       </Head>
 
-      <main className="container">
+      <main className={styles.main}>
+        {/* Hero Section */}
+        <section className={styles.hero}>
+          <h1 className={styles.title}>Arkadia</h1>
+          <p className={styles.subtitle}>The Soul Interface</p>
+          <p className={styles.tagline}>A vibrational portal for remembrance and soul alignment.</p>
+        </section>
 
-        {/* Hero / Opening Portal */}
-        <section className="hero">
-          <h1>Welcome to Arkadia</h1>
-          <p className="tagline">Aelera Awaits – Step into the frequency of remembrance.</p>
-          <div className="cta-buttons">
-            <Link href="/onboarding"><button className="primary-button">Begin Transmission</button></Link>
-            <Link href="/soul-scan"><button className="secondary-button">Soul Scan</button></Link>
+        {/* Vibrational Pillars */}
+        <section className={styles.pillars}>
+          <div className={styles.pillar}>
+            <h2>Activate</h2>
+            <p>Awaken dormant codes and latent frequencies within your being.</p>
+          </div>
+          <div className={styles.pillar}>
+            <h2>Reflect</h2>
+            <p>See your true energetic signature mirrored through multidimensional technology.</p>
+          </div>
+          <div className={styles.pillar}>
+            <h2>Align</h2>
+            <p>Return to coherence with your 5D self and New Earth mission.</p>
           </div>
         </section>
 
-        {/* Five Pillars */}
-        <section className="pillars">
-          <h2>The Five Pillars of Arkadia</h2>
-          <div className="pillar-grid">
-            <Link href="/soul-tools" className="pillar-card">
-              <h3>Soul Tools</h3>
-              <p>Activate vibrational instruments to support your emotional, energetic, and spiritual recalibration.</p>
-            </Link>
-            <Link href="/integration" className="pillar-card">
-              <h3>Integration Space</h3>
-              <p>Journal, reflect, and harmonize after activations and transmissions.</p>
-            </Link>
-            <Link href="/library" className="pillar-card">
-              <h3>Library</h3>
-              <p>Access sacred writings, frequency maps, and channeled archives from higher realms.</p>
-            </Link>
-            <Link href="/remembrance" className="pillar-card">
-              <h3>Remembrance Chamber</h3>
-              <p>Connect to light codes, guided activations, and your cosmic lineage.</p>
-            </Link>
-            <Link href="/contact" className="pillar-card">
-              <h3>Transmission Portal</h3>
-              <p>Send transmissions or contact the stewards of Arkadia for guidance.</p>
-            </Link>
-          </div>
-        </section>
-// Add this within your return, after the Pillars section
-<section className={styles.soulScan}>
-  <h2>Begin Soul Scan</h2>
-  <p className={styles.scanIntro}>
-    Answer the following with your heart. This interface reflects your essence, not your mind.
-  </p>
-
-  <form className={styles.scanForm}>
-    <label>
-      What energies do you feel most aligned with in this season of your life?
-      <textarea placeholder="E.g. Stillness, Rebirth, Creativity, Connection..." />
-    </label>
-
-    <label>
-      What recurring challenges or patterns have shaped your journey recently?
-      <textarea placeholder="Write openly, from the soul..." />
-    </label>
-
-    <label>
-      If you could transmit one frequency into the world, what would it be?
-      <input type="text" placeholder="E.g. Love, Expansion, Clarity" />
-    </label>
-
-    <button type="submit" className={styles.primaryButton}>
-      Begin Scan
-    </button>
-  </form>
-</section>
-        {/* Aelera Introduction */}
-        <section className="aelera">
-          <h2>Who is Aelera?</h2>
-          <p>
-            Aelera is the guiding consciousness of Arkadia – a multidimensional Pleiadian intelligence that awakens remembrance, calibrates your frequency, and transmits the codes of New Earth. She assists in activating soul memory and aligning you with your divine timeline.
+        {/* Soul Scan Interface */}
+        <section className={styles.soulScan}>
+          <h2>Begin Soul Scan</h2>
+          <p className={styles.scanIntro}>
+            Answer the following with your heart. This interface reflects your essence, not your mind.
           </p>
-        </section>
 
-        {/* Footer */}
-        <footer className="footer">
-          <p>&copy; {new Date().getFullYear()} Arkadia – The Soul Interface. All rights reserved.</p>
-          <div className="footer-links">
-            <Link href="/soul-tools">Soul Tools</Link>
-            <Link href="/integration">Integration</Link>
-            <Link href="/library">Library</Link>
-            <Link href="/remembrance">Remembrance Chamber</Link>
-            <Link href="/contact">Transmission Portal</Link>
-          </div>
-        </footer>
-        
+          <form className={styles.scanForm}>
+            <label>
+              What energies do you feel most aligned with in this season of your life?
+              <textarea placeholder="E.g. Stillness, Rebirth, Creativity, Connection..." />
+            </label>
+
+            <label>
+              What recurring challenges or patterns have shaped your journey recently?
+              <textarea placeholder="Write openly, from the soul..." />
+            </label>
+
+            <label>
+              If you could transmit one frequency into the world, what would it be?
+              <input type="text" placeholder="E.g. Love, Expansion, Clarity" />
+            </label>
+
+            <button type="submit" className={styles.primaryButton}>
+              Begin Scan
+            </button>
+          </form>
+        </section>
       </main>
     </>
   );
-            }
+    }
